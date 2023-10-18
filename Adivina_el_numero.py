@@ -3,16 +3,17 @@ import random
 
 def adivina_el_numero(x):
     
-    print("=================================")
-    print(f"Adivina el numero entre 0 y {x}")
-    print("=================================")
-    
     while True:
         try:
             x = int(input("Elige el numero maximo: "))
             break
         except ValueError:
             print("Por favor, ingresa un número válido.")
+    
+    print("=================================")
+    print(f"Adivina el numero entre 0 y {x}")
+    print("=================================")
+
     numero = random.randint(0, x)
     prediccion = -1
 
